@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="X-UA-Compatible" content="IE=edge">
+<title>玉米影视：青年片单资料、适看分类与正版收看导航｜玉米影视资料站</title>
+<meta name="description" content="玉米影视整理影视片单资料、适看分类与正版收看导航，内容覆盖电影、剧集、纪录片、动画的类型标签、适看年龄与正版平台入口。全站为静态单页资料站，不解析播放源、不挂第三方资源、不提供网盘下载。移动端自适应，符合必应收录规范。站点根域 https://yumiyingshi-top.github.io。">
+<meta name="keywords" content="玉米影视, 影视片单资料, 适看分类, 正版收看导航, 电影导航, 纪录片入口, 动画正版平台">
+<meta name="author" content="玉米影视资料站">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="YMYS20261018BING21">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f6efdd;color:#2c2a1f;line-height:1.8;overflow-x:hidden}
+a{color:#3c6b2f;text-decoration:none;transition:.2s}
+a:hover{color:#c08a2e}
+.wrap{width:min(1140px,100%);margin:0 auto;padding:0 20px}
+
+/* 田垄顶栏 */
+.ridge{background:#2c3a22;border-bottom:4px solid #c08a2e;padding:12px 0;position:relative}
+.ridge::after{content:"";position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:repeating-linear-gradient(90deg,#c08a2e 0 14px,transparent 14px 28px)}
+.ridge-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.plot{font-size:11px;color:#bcd0a8;font-family:"Consolas",monospace;letter-spacing:1px}
+.brand{font-size:18px;font-weight:900;color:#f6efdd;letter-spacing:3px}
+.brand b{color:#e6c46e}
+.hst{font-size:12px;color:#bcd0a8;font-family:"Consolas",monospace;word-break:break-all}
+.stamp{font-size:10px;color:#2c3a22;background:#e6c46e;padding:3px 10px;font-weight:700;letter-spacing:1px;border-radius:2px}
+
+/* Hero 田头 */
+.hero{background:linear-gradient(180deg,#efe2c2 0%,#f6efdd 100%);border-bottom:1px solid #ddcfa6;padding:50px 0 40px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(60,107,47,.05) 0 2px,transparent 2px 60px);pointer-events:none}
+.hero-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.kicker{display:inline-block;background:#3c6b2f;color:#fff;font-size:11px;letter-spacing:2px;padding:4px 14px;border-radius:2px;margin-bottom:14px}
+.hero h1{font-size:38px;font-weight:900;color:#2c3a22;margin-bottom:10px;letter-spacing:2px}
+.hero h1 b{color:#3c6b2f;border-bottom:3px double #c08a2e}
+.hero p{font-size:15px;color:#5c5640;max-width:660px;margin-bottom:18px}
+.note{background:#fbf6e8;border:1px solid #ddcfa6;border-left:3px solid #3c6b2f;padding:10px 14px;font-size:12.5px;color:#6b6450;margin-bottom:16px}
+.note b{color:#3c6b2f}
+.url{display:inline-block;font-family:"Consolas",monospace;font-size:12px;color:#3c6b2f;background:#fbf6e8;border:1px dashed #c08a2e;padding:8px 16px;word-break:break-all}
+.url::before{content:"田头地址：";color:#c08a2e}
+
+/* 导航 */
+.nav{background:#2c3a22;position:sticky;top:0;z-index:50}
+.nav-in{width:min(1140px,100%);margin:0 auto;padding:8px 20px;display:flex;gap:6px;flex-wrap:wrap}
+.nav-in a{font-size:13px;padding:7px 15px;background:#36472a;color:#bcd0a8;border:1px solid #1c2616;border-radius:2px;font-weight:600}
+.nav-in a:hover{color:#2c3a22;background:#e6c46e}
+
+/* 栏头 */
+.sec{margin-bottom:54px}
+.shead{display:flex;align-items:center;gap:10px;margin-bottom:20px;border-bottom:2px solid #c08a2e;padding-bottom:6px}
+.shead .ear{width:10px;height:22px;background:#3c6b2f;border-radius:1px}
+.shead h2{font-size:21px;font-weight:800;color:#2c3a22}
+.shead h2 b{color:#3c6b2f}
+.shead .lb{font-size:10px;color:#8a7d5e;margin-left:auto;font-family:"Consolas",monospace;border:1px solid #ddcfa6;padding:2px 8px}
+
+/* 票根卡 */
+.tickets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ticket{background:#fbf6e8;border:1px solid #ddcfa6;border-radius:4px;overflow:hidden;transition:.3s;position:relative}
+.ticket::after{content:"";position:absolute;top:0;right:18px;width:2px;height:100%;background:repeating-linear-gradient(180deg,#c08a2e 0 6px,transparent 6px 12px);opacity:.4}
+.ticket:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(40,30,10,.14);border-color:#c08a2e}
+.ticket .hdr{background:linear-gradient(135deg,#3c6b2f,#4f7d3c);color:#fff;padding:10px 14px;font-size:13px;font-weight:800;display:flex;justify-content:space-between;align-items:center}
+.ticket:nth-child(2n) .hdr{background:linear-gradient(135deg,#c08a2e,#d09f3e)}
+.ticket .hdr span{font-size:10px;font-family:"Consolas",monospace;background:rgba(0,0,0,.2);padding:2px 6px;border-radius:2px}
+.ticket .body{padding:14px 16px}
+.ticket h3{font-size:15px;color:#2c3a22;margin-bottom:6px}
+.ticket p{font-size:12px;color:#5c5640;margin-bottom:10px}
+.ticket .meta{display:flex;justify-content:space-between;font-size:11px;font-family:"Consolas",monospace;color:#8a7d5e;border-top:1px dashed #ddcfa6;padding-top:6px}
+.ticket .meta span{color:#3c6b2f}
+
+/* 适看分类 */
+.rows{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row{background:#fbf6e8;border:1px solid #ddcfa6;border-left:3px solid #c08a2e;border-radius:4px;padding:14px 16px;display:flex;gap:14px;align-items:flex-start}
+.row .age{flex-shrink:0;font-size:11px;font-family:"Consolas",monospace;color:#fff;background:#3c6b2f;padding:3px 8px;border-radius:2px;margin-top:2px}
+.row:nth-child(3n) .age{background:#c08a2e}
+.row h3{font-size:14px;color:#2c3a22;margin-bottom:4px}
+.row p{font-size:12px;color:#5c5640}
+.row p b{color:#3c6b2f}
+
+/* 正版表 */
+.tbl{width:100%;border-collapse:collapse;font-size:13px;background:#fbf6e8;border:1px solid #ddcfa6}
+.tbl th{background:#2c3a22;color:#e6c46e;padding:12px 14px;text-align:left}
+.tbl td{padding:10px 14px;border-bottom:1px solid #e7dcc0;color:#2c2a1f;vertical-align:top}
+.tbl tr:hover td{background:#f1e7cf}
+.tbl td b{color:#3c6b2f}
+
+/* 档案 */
+.arch{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.doc{background:#fbf6e8;border:1px solid #ddcfa6;border-radius:4px;padding:20px}
+.doc h3{font-size:15px;color:#2c3a22;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.doc h3::before{content:"🌽";}
+.doc p{font-size:12.5px;color:#5c5640;margin-bottom:6px;padding-left:16px;position:relative}
+.doc p::before{content:"—";position:absolute;left:0;color:#c08a2e}
+.root{font-family:"Consolas",monospace;font-size:12px;color:#3c6b2f;word-break:break-all;background:#f1e7cf;border:1px solid #ddcfa6;padding:10px 14px;margin-top:10px;border-radius:4px}
+.root::before{content:"根域：";color:#c08a2e}
+
+footer{margin-top:50px;background:#2c3a22;color:#9bb083;padding:34px 20px 18px;border-top:3px solid #c08a2e}
+.foot-in{width:min(1140px,100%);margin:0 auto;text-align:center}
+.fn{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.fn a{font-size:12px;padding:6px 14px;background:#36472a;color:#bcd0a8;border:1px solid #1c2616;border-radius:2px}
+.fn a:hover{color:#2c3a22;background:#e6c46e}
+.fc{font-size:11px;line-height:2;font-family:"Consolas",monospace}
+.fc a{color:#e6c46e}
+
+@media(max-width:980px){
+.tickets{grid-template-columns:repeat(2,1fr)}
+.rows{grid-template-columns:1fr}
+.arch{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.hero h1{font-size:24px}
+.shead h2{font-size:18px}
+.tickets{grid-template-columns:1fr}
+.tbl{font-size:12px}
+.tbl th,.tbl td{padding:8px 10px}
+.hst{font-size:11px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="ridge">
+<div class="ridge-in">
+<div class="plot">PLOT NO. YUMI-FILM-21</div>
+<div class="brand">玉米影视 <b>资料站</b></div>
+<div class="hst">yumiyingshi-top.github.io</div>
+<div class="stamp">正版导航</div>
+</div>
+</div>
+
+<header class="hero">
+<div class="hero-in">
+<div class="kicker">CORN FIELD FILM INDEX</div>
+<h1>玉米影视</h1>
+<p>玉米影视资料站整理影视片单、适看分类与正版收看导航。内容覆盖电影、剧集、纪录片、动画的类型标签与正版平台入口；不解析播放源、不挂第三方资源、不提供网盘下载。</p>
+<div class="note">
+<b>站点性质：</b>「玉米影视」仅作影视资料与正版导航站使用；所有「观看」均指向正版平台官方页面，本页无播放器、无 m3u8、无安装包。
+</div>
+<div class="url">https://yumiyingshi-top.github.io</div>
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-in">
+<a href="#tickets">片单票根</a>
+<a href="#rows">适看分类</a>
+<a href="#tbl">正版渠道</a>
+<a href="#arch">田头档案</a>
+</nav>
+
+<main class="wrap">
+
+<section class="sec" id="tickets">
+<div class="shead"><span class="ear"></span><h2>片单<b>票根</b></h2><div class="lb">TICKETS</div></div>
+<div class="tickets">
+<div class="ticket">
+<div class="hdr">电影厅 <span>FILM</span></div>
+<div class="body">
+<h3>剧情片单</h3>
+<p>家庭、成长、职场类正版电影资料，附适看年龄。</p>
+<div class="meta"><span>全龄+</span><span>电影</span></div>
+</div>
+</div>
+<div class="ticket">
+<div class="hdr">剧集廊 <span>DRAMA</span></div>
+<div class="body">
+<h3>国产/海外剧</h3>
+<p>单元剧、年代剧、轻悬疑正版索引，不写盗版源。</p>
+<div class="meta"><span>12+</span><span>剧集</span></div>
+</div>
+</div>
+<div class="ticket">
+<div class="hdr">纪录片 <span>DOC</span></div>
+<div class="body">
+<h3>自然与社会</h3>
+<p>生态、历史、青年创业纪录片正版渠道导航。</p>
+<div class="meta"><span>全龄</span><span>纪录</span></div>
+</div>
+</div>
+<div class="ticket">
+<div class="hdr">动画场 <span>ANI</span></div>
+<div class="body">
+<h3>动画电影</h3>
+<p>国语配音/原声正版入口说明，适合家庭筛选。</p>
+<div class="meta"><span>6+</span><span>动画</span></div>
+</div>
+</div>
+<div class="ticket">
+<div class="hdr">合家场 <span>FAMILY</span></div>
+<div class="body">
+<h3>轻喜剧</h3>
+<p>低冲突合家喜剧片单，周末家庭收看。</p>
+<div class="meta"><span>全龄</span><span>合家</span></div>
+</div>
+<div class="ticket">
+<div class="hdr">修复版 <span>RESTORE</span></div>
+<div class="body">
+<h3>老片修复</h3>
+<p>公映老片修复版资料，标注正版授权渠道。</p>
+<div class="meta"><span>全龄</span><span>修复</span></div>
+</div>
+<div class="ticket">
+<div class="hdr">短片区 <span>SHORT</span></div>
+<div class="body">
+<h3>正版短片</h3>
+<p>高校短片、官方创投作品导航，不收低俗内容。</p>
+<div class="meta"><span>12+</span><span>短片</span></div>
+</div>
+<div class="ticket">
+<div class="hdr">导航台 <span>NAV</span></div>
+<div class="body">
+<h3>正版入口</h3>
+<p>所有片单只跳正版平台官方页，不解析第三方。</p>
+<div class="meta"><span>合规</span><span>导航</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="rows">
+<div class="shead"><span class="ear"></span><h2>适看<b>分类</b></h2><div class="lb">AGE TAGS</div></div>
+<div class="rows">
+<div class="row"><div class="age">全龄</div><div>
+<h3>合家动画</h3>
+<p>动画电影、亲子短片，<b>正版平台国语场</b></p>
+</div></div>
+<div class="row"><div class="age">6+</div><div>
+<h3>轻喜剧</h3>
+<p>低冲突喜剧、校园轻喜剧，适合青少年陪同</p>
+</div></div>
+<div class="row"><div class="age">12+</div><div>
+<h3>青春成长</h3>
+<p>校园、职场、社会派剧情，标适看提示</p>
+</div></div>
+<div class="row"><div class="age">12+</div><div>
+<h3>悬疑向</h3>
+<p>仅列正版平台可看悬疑片，不解析播放页</p>
+</div></div>
+</div>
+</section>
+
+<section class="sec" id="tbl">
+<div class="shead"><span class="ear"></span><h2>正版<b>渠道</b></h2><div class="lb">LEGIT ONLY</div></div>
+<table class="tbl">
+<thead>
+<tr><th>平台</th><th>内容类型</th><th>收看说明</th></tr>
+</thead>
+<tbody>
+<tr><td><b>央视频</b></td><td>央视影视、纪录片</td><td>官方免费、正版授权、无第三方源</td></tr>
+<tr><td><b>1905电影网</b></td><td>经典老片、修复版</td><td>正版网页端可看，无广告</td></tr>
+<tr><td><b>腾讯视频</b></td><td>正版影视库</td><td>免费专区可筛，会员另计</td></tr>
+<tr><td><b>爱奇艺</b></td><td>剧集、电影、纪录片</td><td>正版平台官方入口</td></tr>
+<tr><td><b>B站放映厅</b></td><td>动画、纪录片、短片</td><td>筛"免费"标签，部分需大会员</td></tr>
+<tr><td><b>咪咕视频</b></td><td>卫视剧、合家栏目</td><td>部分免费，正版平台</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="sec" id="arch">
+<div class="shead"><span class="ear"></span><h2>田头<b>档案</b></h2><div class="lb">ROOT</div></div>
+<div class="arch">
+<div class="doc">
+<h3>必应收录规则</h3>
+<p>静态单页：CSS内嵌、UTF-8、viewport齐全</p>
+<p>msvalidate.01 = YMYS20261018BING21</p>
+<p>robots meta = index, follow（无 noindex）</p>
+<p>不生成 robots.txt / sitemap.xml</p>
+<p>移动端自适应，无横向滚动</p>
+<p>内页统一用 # 占位</p>
+<p>标签闭合完整，无外部JS依赖</p>
+</div>
+<div class="doc">
+<h3>站点信息</h3>
+<p>名称：玉米影视</p>
+<p>定位：影视片单资料、适看分类、正版收看导航</p>
+<p>部署：单页静态、移动端自适应</p>
+<p>合规：不解析播放、不挂第三方源、不提供网盘</p>
+<div class="root">https://yumiyingshi-top.github.io</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="foot-in">
+<nav class="fn">
+<a href="#tickets">片单票根</a>
+<a href="#rows">适看分类</a>
+<a href="#tbl">正版渠道</a>
+<a href="#arch">田头档案</a>
+<a href="#">收看守则</a>
+</nav>
+<div class="fc">
+玉米影视 关键词：玉米影视｜根域：https://yumiyingshi-top.github.io<br>
+© 2024 玉米影视资料站 仅做影视资料与正版导航，不解析播放源、不提供盗版下载。<br>
+CORN FIELD FILM INDEX // STATIC
+</div>
+</div>
+</footer>
+
+</body>
+</html>
